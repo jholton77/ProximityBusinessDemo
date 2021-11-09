@@ -3,19 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A5A3DAB273188EF008E406D /* VerificationPeers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A3DAA273188EF008E406D /* VerificationPeers.swift */; };
+		9A5A3DAD27318919008E406D /* OpenVerifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A3DAC27318919008E406D /* OpenVerifications.swift */; };
+		9A5A3DAF27318E13008E406D /* Emails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A3DAE27318E13008E406D /* Emails.swift */; };
+		9A9F572F273081C700065BC8 /* BusinessPartnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F572E273081C700065BC8 /* BusinessPartnerCell.swift */; };
+		9A9F5731273081F900065BC8 /* VerificationTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F5730273081F900065BC8 /* VerificationTypeCell.swift */; };
 		9AB1C7EA2730747B00655B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1C7E92730747B00655B55 /* AppDelegate.swift */; };
 		9AB1C7EC2730747B00655B55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1C7EB2730747B00655B55 /* SceneDelegate.swift */; };
 		9AB1C7EE2730747B00655B55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1C7ED2730747B00655B55 /* ViewController.swift */; };
 		9AB1C7F12730747B00655B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB1C7EF2730747B00655B55 /* Main.storyboard */; };
 		9AB1C7F32730747C00655B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB1C7F22730747C00655B55 /* Assets.xcassets */; };
 		9AB1C7F62730747C00655B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB1C7F42730747C00655B55 /* LaunchScreen.storyboard */; };
+		9AB1C8002730778900655B55 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1C7FF2730778900655B55 /* UserCell.swift */; };
+		9ADC93DE27308D4300043829 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC93DD27308D4300043829 /* User.swift */; };
+		9ADC93E027308DA300043829 /* ProximityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC93DF27308DA300043829 /* ProximityApp.swift */; };
+		9ADC93E227308E1000043829 /* LocalLoadSaveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC93E127308E1000043829 /* LocalLoadSaveHelper.swift */; };
+		9ADC93E627308F5700043829 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC93E527308F5700043829 /* KeychainWrapper.m */; };
+		9ADC93E827309D0700043829 /* BizPartners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC93E727309D0700043829 /* BizPartners.swift */; };
+		9ADC93EA273163C500043829 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC93E9273163C500043829 /* WaitingView.swift */; };
+		9ADC93F62731733000043829 /* proximity_logo_reveal_with_type.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93EE2731732F00043829 /* proximity_logo_reveal_with_type.gif */; };
+		9ADC93F72731733000043829 /* logo-notitle-fade-looping.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93EF2731732F00043829 /* logo-notitle-fade-looping.gif */; };
+		9ADC93F82731733000043829 /* logo-no-fade.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93F02731732F00043829 /* logo-no-fade.gif */; };
+		9ADC93F92731733000043829 /* logo-no-title-no-fade.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93F12731732F00043829 /* logo-no-title-no-fade.gif */; };
+		9ADC93FA2731733000043829 /* logo-waiting-loop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93F22731732F00043829 /* logo-waiting-loop.gif */; };
+		9ADC93FB2731733000043829 /* logo-fade-looping.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93F32731732F00043829 /* logo-fade-looping.gif */; };
+		9ADC93FC2731733000043829 /* loading-loop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93F42731733000043829 /* loading-loop.gif */; };
+		9ADC93FD2731733000043829 /* ProximityLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC93F52731733000043829 /* ProximityLogo.gif */; };
+		9ADC93FF273175F400043829 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC93FE273175F400043829 /* TimeHelper.swift */; };
+		FA533286FF36F0712F2CFE2D /* Pods_ProximityBusinessDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BA8269593A65BFF9DA6BA6 /* Pods_ProximityBusinessDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31BA8269593A65BFF9DA6BA6 /* Pods_ProximityBusinessDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProximityBusinessDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A5A3DAA273188EF008E406D /* VerificationPeers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPeers.swift; sourceTree = "<group>"; };
+		9A5A3DAC27318919008E406D /* OpenVerifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVerifications.swift; sourceTree = "<group>"; };
+		9A5A3DAE27318E13008E406D /* Emails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emails.swift; sourceTree = "<group>"; };
+		9A9F572E273081C700065BC8 /* BusinessPartnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPartnerCell.swift; sourceTree = "<group>"; };
+		9A9F5730273081F900065BC8 /* VerificationTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTypeCell.swift; sourceTree = "<group>"; };
 		9AB1C7E62730747B00655B55 /* ProximityBusinessDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProximityBusinessDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB1C7E92730747B00655B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AB1C7EB2730747B00655B55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +52,26 @@
 		9AB1C7F22730747C00655B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AB1C7F52730747C00655B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AB1C7F72730747C00655B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB1C7FF2730778900655B55 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		9ADC93DD27308D4300043829 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9ADC93DF27308DA300043829 /* ProximityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityApp.swift; sourceTree = "<group>"; };
+		9ADC93E127308E1000043829 /* LocalLoadSaveHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLoadSaveHelper.swift; sourceTree = "<group>"; };
+		9ADC93E327308F1F00043829 /* KeychainWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		9ADC93E427308F5700043829 /* ProximityBusinessDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProximityBusinessDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		9ADC93E527308F5700043829 /* KeychainWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		9ADC93E727309D0700043829 /* BizPartners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizPartners.swift; sourceTree = "<group>"; };
+		9ADC93E9273163C500043829 /* WaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
+		9ADC93EE2731732F00043829 /* proximity_logo_reveal_with_type.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = proximity_logo_reveal_with_type.gif; sourceTree = "<group>"; };
+		9ADC93EF2731732F00043829 /* logo-notitle-fade-looping.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "logo-notitle-fade-looping.gif"; sourceTree = "<group>"; };
+		9ADC93F02731732F00043829 /* logo-no-fade.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "logo-no-fade.gif"; sourceTree = "<group>"; };
+		9ADC93F12731732F00043829 /* logo-no-title-no-fade.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "logo-no-title-no-fade.gif"; sourceTree = "<group>"; };
+		9ADC93F22731732F00043829 /* logo-waiting-loop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "logo-waiting-loop.gif"; sourceTree = "<group>"; };
+		9ADC93F32731732F00043829 /* logo-fade-looping.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "logo-fade-looping.gif"; sourceTree = "<group>"; };
+		9ADC93F42731733000043829 /* loading-loop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-loop.gif"; sourceTree = "<group>"; };
+		9ADC93F52731733000043829 /* ProximityLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ProximityLogo.gif; sourceTree = "<group>"; };
+		9ADC93FE273175F400043829 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
+		A5C2532B8E27F7AF9072D84A /* Pods-ProximityBusinessDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityBusinessDemo.debug.xcconfig"; path = "Target Support Files/Pods-ProximityBusinessDemo/Pods-ProximityBusinessDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F12CF0CD5F37CC000B0FB1C7 /* Pods-ProximityBusinessDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProximityBusinessDemo.release.xcconfig"; path = "Target Support Files/Pods-ProximityBusinessDemo/Pods-ProximityBusinessDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +79,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA533286FF36F0712F2CFE2D /* Pods_ProximityBusinessDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		598C19C29A6E356DB3311F74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31BA8269593A65BFF9DA6BA6 /* Pods_ProximityBusinessDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A9F5732273082BA00065BC8 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				9A9F572E273081C700065BC8 /* BusinessPartnerCell.swift */,
+				9A9F5730273081F900065BC8 /* VerificationTypeCell.swift */,
+				9AB1C7FF2730778900655B55 /* UserCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
 		9AB1C7DD2730747B00655B55 = {
 			isa = PBXGroup;
 			children = (
 				9AB1C7E82730747B00655B55 /* ProximityBusinessDemo */,
 				9AB1C7E72730747B00655B55 /* Products */,
+				D6DC891507D43C608FF3A07A /* Pods */,
+				598C19C29A6E356DB3311F74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +125,9 @@
 		9AB1C7E82730747B00655B55 /* ProximityBusinessDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9ADC93ED2731731D00043829 /* GIFs */,
+				9ADC93DC27308D0E00043829 /* Helpers */,
+				9A9F5732273082BA00065BC8 /* TableCells */,
 				9AB1C7E92730747B00655B55 /* AppDelegate.swift */,
 				9AB1C7EB2730747B00655B55 /* SceneDelegate.swift */,
 				9AB1C7ED2730747B00655B55 /* ViewController.swift */,
@@ -67,6 +139,49 @@
 			path = ProximityBusinessDemo;
 			sourceTree = "<group>";
 		};
+		9ADC93DC27308D0E00043829 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9ADC93DD27308D4300043829 /* User.swift */,
+				9ADC93DF27308DA300043829 /* ProximityApp.swift */,
+				9ADC93E127308E1000043829 /* LocalLoadSaveHelper.swift */,
+				9ADC93E327308F1F00043829 /* KeychainWrapper.h */,
+				9ADC93E527308F5700043829 /* KeychainWrapper.m */,
+				9ADC93E427308F5700043829 /* ProximityBusinessDemo-Bridging-Header.h */,
+				9ADC93E727309D0700043829 /* BizPartners.swift */,
+				9ADC93E9273163C500043829 /* WaitingView.swift */,
+				9ADC93FE273175F400043829 /* TimeHelper.swift */,
+				9A5A3DAA273188EF008E406D /* VerificationPeers.swift */,
+				9A5A3DAC27318919008E406D /* OpenVerifications.swift */,
+				9A5A3DAE27318E13008E406D /* Emails.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9ADC93ED2731731D00043829 /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				9ADC93F42731733000043829 /* loading-loop.gif */,
+				9ADC93F32731732F00043829 /* logo-fade-looping.gif */,
+				9ADC93F02731732F00043829 /* logo-no-fade.gif */,
+				9ADC93F12731732F00043829 /* logo-no-title-no-fade.gif */,
+				9ADC93EF2731732F00043829 /* logo-notitle-fade-looping.gif */,
+				9ADC93F22731732F00043829 /* logo-waiting-loop.gif */,
+				9ADC93EE2731732F00043829 /* proximity_logo_reveal_with_type.gif */,
+				9ADC93F52731733000043829 /* ProximityLogo.gif */,
+			);
+			path = GIFs;
+			sourceTree = "<group>";
+		};
+		D6DC891507D43C608FF3A07A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5C2532B8E27F7AF9072D84A /* Pods-ProximityBusinessDemo.debug.xcconfig */,
+				F12CF0CD5F37CC000B0FB1C7 /* Pods-ProximityBusinessDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AB1C7FA2730747C00655B55 /* Build configuration list for PBXNativeTarget "ProximityBusinessDemo" */;
 			buildPhases = (
+				57F2DE83563A42082F6252CC /* [CP] Check Pods Manifest.lock */,
 				9AB1C7E22730747B00655B55 /* Sources */,
 				9AB1C7E32730747B00655B55 /* Frameworks */,
 				9AB1C7E42730747B00655B55 /* Resources */,
+				BD22BCE6E4AE4CA64BB46E80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -98,6 +215,7 @@
 				TargetAttributes = {
 					9AB1C7E52730747B00655B55 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -126,20 +244,83 @@
 			files = (
 				9AB1C7F62730747C00655B55 /* LaunchScreen.storyboard in Resources */,
 				9AB1C7F32730747C00655B55 /* Assets.xcassets in Resources */,
+				9ADC93F62731733000043829 /* proximity_logo_reveal_with_type.gif in Resources */,
+				9ADC93F72731733000043829 /* logo-notitle-fade-looping.gif in Resources */,
 				9AB1C7F12730747B00655B55 /* Main.storyboard in Resources */,
+				9ADC93FC2731733000043829 /* loading-loop.gif in Resources */,
+				9ADC93FD2731733000043829 /* ProximityLogo.gif in Resources */,
+				9ADC93F92731733000043829 /* logo-no-title-no-fade.gif in Resources */,
+				9ADC93F82731733000043829 /* logo-no-fade.gif in Resources */,
+				9ADC93FB2731733000043829 /* logo-fade-looping.gif in Resources */,
+				9ADC93FA2731733000043829 /* logo-waiting-loop.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57F2DE83563A42082F6252CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProximityBusinessDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD22BCE6E4AE4CA64BB46E80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProximityBusinessDemo/Pods-ProximityBusinessDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProximityBusinessDemo/Pods-ProximityBusinessDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProximityBusinessDemo/Pods-ProximityBusinessDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9AB1C7E22730747B00655B55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9F5731273081F900065BC8 /* VerificationTypeCell.swift in Sources */,
+				9ADC93FF273175F400043829 /* TimeHelper.swift in Sources */,
+				9A5A3DAF27318E13008E406D /* Emails.swift in Sources */,
+				9AB1C8002730778900655B55 /* UserCell.swift in Sources */,
+				9ADC93EA273163C500043829 /* WaitingView.swift in Sources */,
+				9A5A3DAB273188EF008E406D /* VerificationPeers.swift in Sources */,
 				9AB1C7EE2730747B00655B55 /* ViewController.swift in Sources */,
+				9ADC93E227308E1000043829 /* LocalLoadSaveHelper.swift in Sources */,
+				9ADC93E027308DA300043829 /* ProximityApp.swift in Sources */,
+				9ADC93E827309D0700043829 /* BizPartners.swift in Sources */,
+				9A9F572F273081C700065BC8 /* BusinessPartnerCell.swift in Sources */,
+				9A5A3DAD27318919008E406D /* OpenVerifications.swift in Sources */,
 				9AB1C7EA2730747B00655B55 /* AppDelegate.swift in Sources */,
 				9AB1C7EC2730747B00655B55 /* SceneDelegate.swift in Sources */,
+				9ADC93DE27308D4300043829 /* User.swift in Sources */,
+				9ADC93E627308F5700043829 /* KeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +464,11 @@
 		};
 		9AB1C7FB2730747C00655B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C2532B8E27F7AF9072D84A /* Pods-ProximityBusinessDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35BK9MH934;
 				INFOPLIST_FILE = ProximityBusinessDemo/Info.plist;
@@ -295,16 +478,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pivsecurityllc.ProximityBusinessDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProximityBusinessDemo/Helpers/ProximityBusinessDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		9AB1C7FC2730747C00655B55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12CF0CD5F37CC000B0FB1C7 /* Pods-ProximityBusinessDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35BK9MH934;
 				INFOPLIST_FILE = ProximityBusinessDemo/Info.plist;
@@ -314,8 +501,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pivsecurityllc.ProximityBusinessDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProximityBusinessDemo/Helpers/ProximityBusinessDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
