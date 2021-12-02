@@ -239,7 +239,7 @@ class Verifications {
             mainUserMessage = "Account Recovery"
         }
         
-        mainUserMessage = mainUserMessage! + " Verification Request"
+        mainUserMessage = mainUserMessage! + " Verification" // Request"
         
         proxOpen.MainUserMessage = mainUserMessage
         proxOpen.MainUserNotes = businessPartnerCase.Message
