@@ -8,7 +8,21 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var constraintContentHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var textViewVerificationMessages: UITextView!
+    @IBOutlet weak var textViewPeerVerificationMessage: UITextView!
+    
+    var activeField : UITextView?
+    var lastOffset : CGPoint = CGPoint()
+    var keyboardHeight : CGFloat?
+    var alreadyLoaded : Bool = false
+    var lastConstraintContentHeight : CGFloat = 0
     
     @IBOutlet weak var tableUsers: UITableView!
     @IBOutlet weak var tableBusinessPartners: UITableView!
@@ -18,6 +32,9 @@ class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var tableVerificationStrategy: UITableView!
     @IBOutlet weak var tablePeerUsers: UITableView!
+    
+    @IBOutlet weak var viewVerificationType: UIView!
+    
     
     var verificationTypes = NSMutableArray()
     var verificationStrategies = NSMutableArray()
@@ -30,6 +47,16 @@ class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add touch gesture for contentView
+        self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(returnTextView(gesture:))))
+        self.scrollView.isScrollEnabled = false
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        textViewMessage.delegate = self
+        textViewPeerMessage.delegate = self
         
         self.toggleActivityIndicatorView(title: "LOADING", show: true, withCompletion: {})
         
@@ -70,7 +97,27 @@ class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSou
     
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+         if !alreadyLoaded {
+            
+           let windows = UIApplication.shared.windows
+           let topPadding = windows[0].safeAreaInsets.top
+           
+           let bottomY = viewVerificationType.frame.origin.y + viewVerificationType.frame.height + topPadding
+           let screenHeight = UIScreen.main.bounds.height//self.view.frame.height //.origin.y// + 50
+           
+           constraintContentHeight.constant =  bottomY
+        
+           lastConstraintContentHeight = bottomY
+            
+           if bottomY > screenHeight {
+               self.scrollView.isScrollEnabled = true
+           }
+           
+           alreadyLoaded = true
+        }
+    }
+    
     func loadUsers() {
         users.removeAll()
         users.append("+17732944095")
@@ -335,6 +382,94 @@ class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSou
         return "none"
     }
     
+    //for scroll view
+    @objc func returnTextView(gesture: UIGestureRecognizer) {
+        guard activeField != nil else {
+            return
+        }
+        
+        activeField?.resignFirstResponder()
+        activeField = nil
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        activeField = textView
+        lastOffset = self.scrollView.contentOffset
+        return true
+    }
+    
+    /*
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        activeField?.resignFirstResponder()
+        activeField = nil
+        return true
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeField = textField
+        lastOffset = self.scrollView.contentOffset
+        return true
+    }
+    */
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        activeField?.resignFirstResponder()
+        activeField = nil
+        return true
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        DispatchQueue.main.async {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.keyboardHeight == nil {
+                    self.keyboardHeight = keyboardSize.height
+                 }
+                
+                // so increase contentView's height by keyboard height
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.constraintContentHeight.constant += self.keyboardHeight!
+                })
+                
+                // move if keyboard hide input field
+                //let distanceToBottom = self.scrollView.frame.size.height - (self.activeField?.frame.origin.y)! - (self.activeField?.frame.size.height)! - 20
+                
+                let distanceToBottom = self.scrollView.frame.size.height - (self.viewVerificationType?.frame.origin.y)! - (self.viewVerificationType?.frame.size.height)! - 20
+                
+                let collapseSpace = self.keyboardHeight! - distanceToBottom
+                if collapseSpace < 0 {
+                // no collapse
+                    return
+                }
+                
+                self.scrollView.isScrollEnabled = true
+                
+                // set new offset for scroll view
+                UIView.animate(withDuration: 0.3, animations: {
+                    // scroll to the position above keyboard 10 points
+                    self.scrollView.contentOffset = CGPoint(x: self.lastOffset.x, y: collapseSpace)
+                })
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+      
+        DispatchQueue.main.async {
+          
+            if self.scrollView.isScrollEnabled {
+                UIView.animate(withDuration: 0.3) {
+                    if self.keyboardHeight != nil {
+                        //self.constraintContentHeight.constant -= self.keyboardHeight!
+                        self.constraintContentHeight.constant = self.lastConstraintContentHeight
+                        self.scrollView.contentOffset = self.lastOffset
+                    }
+                }
+            }
+            
+            //self.scrollView.isScrollEnabled = false
+        }
+       
+    }
+
     @objc func bizPartnersLoaded() {
         DispatchQueue.main.async {
             
