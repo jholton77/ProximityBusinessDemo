@@ -49,8 +49,8 @@ class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         
         // Add touch gesture for contentView
-        self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(returnTextView(gesture:))))
-        self.scrollView.isScrollEnabled = false
+        //self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(returnTextView(gesture:))))
+        //self.scrollView.isScrollEnabled = false
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -297,6 +297,7 @@ class ViewController: UIViewController,  UITableViewDelegate, UITableViewDataSou
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        print("selected row")
         //tableView.deselectRow(at: indexPath, animated: true)
         
         /*

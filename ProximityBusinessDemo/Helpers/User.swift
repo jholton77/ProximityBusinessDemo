@@ -65,9 +65,13 @@ class Flags : AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     @objc var Locked : String!
     @objc var SymKey : String!
     @objc var Demo : String!
+    @objc var BusinessDemo : String!
     @objc var Version : String!
     @objc var Created : String!
-    @objc var IsPremium : String!
+    //@objc var IsPremium : String!
+    
+    @objc var SubscriptionPlanType : String!
+    @objc var SubscriptionPlanExpires : String!
     
     class Local {
         static let storedUserName : String = "proxUser"
@@ -160,6 +164,28 @@ class Flags : AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                 return task
                 
             })
+        }
+        
+        static func saveUser(user : User)-> AWSTask<AnyObject>{
+            let dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
+            
+            if user.Id != nil {
+                return dynamoDBObjectMapper.save(user).continueWith(block: { (task:AWSTask<AnyObject>!) -> Any? in
+                    if let error = task.error as NSError? {
+                        //NSLog("Error in saveUser")
+                        print("The request failed. Error: \(error)")
+                        NotificationCenter.default.post(name:NSNotification.Name(rawValue:"AWSError"), object: nil)
+                    } else {
+                        
+                        //save successfuly
+                    }
+                    
+                    return task
+                })
+            }
+            else {
+                return AWSTask<AnyObject>(result: nil)
+            }
         }
         
         static func saveUserFlags(userFlags: Flags)-> AWSTask<AnyObject>{
